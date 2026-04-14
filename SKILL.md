@@ -31,9 +31,7 @@ If nothing matches, ask: **"What are you trying to do?"** and list: write a PRD,
 
 ## Step 2 — Load project context (full understanding, token-efficient)
 
-Read ALL of the following that exist. These compressed files replace raw file exploration — they give you the full codebase picture without reading individual source files one by one.
-
-**Read every file that exists from this list:**
+**Always read these if they exist:**
 
 | Priority | File(s) | Why | Max lines |
 |---|---|---|---|
@@ -46,7 +44,7 @@ Read ALL of the following that exist. These compressed files replace raw file ex
 | 7th | Most recent `docs/prd-*.md` | What's already been specced | 80 |
 | 8th | Most recent `docs/discovery-*.md` | User research already done | 80 |
 
-**Do NOT read individual source files** — the compressed files above replace that. If none of the above exist at all, ask: "Can you give me a quick description of your product so I can tailor this to your project?"
+**If none of the compressed files exist (no codebase-map, no repomix, no graphify):** read `README.md` first, then explore the project directory and read source files until you have a full picture of what the product does, what's built, and how it works. Don't stop until you understand the codebase well enough to produce project-specific (not generic) PM output.
 
 After reading everything available, you should know: what the product does, who it's for, what's already built, what's planned, and what's been researched. Use all of this to make every output specific to this project — never generic.
 

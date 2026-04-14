@@ -78,6 +78,22 @@ PRD saved to `docs/prd-csv-import.md`
 
 ---
 
+## Note: Get better results with less tokens
+
+Compass reads your project context before every workflow. The better your context files, the more accurate and project-specific the output — and the fewer tokens it uses.
+
+**Set up one of these in your project for best results:**
+
+| File | How to generate | What it gives Compass |
+|---|---|---|
+| `.claude-context/codebase-map.md` | Run [`repomix`](https://github.com/yamadashy/repomix) or a codebase-map generator | Full project structure + file summaries in one shot |
+| `repomix.md` / `repomix-output.md` | Run `repomix` in your project root | Packed full codebase, optimized for AI |
+| `graphify-out/summary.md` | Run [`graphify`](https://github.com/urtd/graphify) | Knowledge graph of your project |
+
+Without these, Compass falls back to `README.md` only — which works, but produces more generic output. With them, it understands your full codebase without reading individual source files one by one.
+
+---
+
 ## Token budget
 
 Designed to stay under 2000 tokens per invocation:

@@ -1,2 +1,22 @@
+# OS
 .DS_Store
 Thumbs.db
+
+# Claude Code local settings (contains machine-specific permissions/paths)
+.claude/settings.local.json
+
+# Generated PM output docs (not part of the skill itself)
+docs/ideation-*.md
+docs/prd-*.md
+docs/stories-*.md
+docs/roadmap.md
+docs/discovery-*.md
+docs/launch-*.md
+docs/update-*.md
+docs/compete-*.md
+docs/feedback-*.md
+docs/premortem-*.md
+docs/okr-*.md
+docs/interview-guide-*.md
+docs/brief-*.md
+docs/superpowers/

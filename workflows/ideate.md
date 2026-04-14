@@ -17,7 +17,7 @@ Read ALL of the following that exist before generating a single idea:
 - `docs/roadmap.md` — skip any idea already on the roadmap
 - Most recent `docs/prd-*.md` — skip anything already specced
 
-Do NOT read individual source files — the above give you the full picture without it. Use everything you read to generate ideas specific to this product, this user, and this exact stage. Never generic.
+**If none of the compressed files exist (no codebase-map, no repomix, no graphify):** read `README.md` first, then explore the project directory and read source files until you understand the codebase well enough to generate ideas that are specific to this product — not generic SaaS advice. Do NOT generate ideas until you have that understanding.
 
 ## Process
 1. Reframe the input as a "How might we..." statement specific to this product
