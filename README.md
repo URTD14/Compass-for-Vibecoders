@@ -1,6 +1,6 @@
-# pm-skill
+# Compass for Vibecoders
 
-> Cursor for product managers — free, open source, runs in your terminal.
+> Your PM OS — free, open source, runs in your terminal.
 
 A Claude Code skill that turns any project into a full PM workspace. Write PRDs, prioritize backlogs, synthesize user research, plan launches, and more — without leaving your editor.
 
