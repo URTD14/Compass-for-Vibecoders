@@ -29,17 +29,27 @@ Match the user's message to a workflow file:
 
 If nothing matches, ask: **"What are you trying to do?"** and list: write a PRD, break into stories, prioritize, synthesize research, plan a launch, write an update, analyze competitors, synthesize feedback, run a pre-mortem, set OKRs, write an interview guide, write a strategic brief, generate feature ideas.
 
-## Step 2 — Load project context
+## Step 2 — Load project context (token-efficient priority order)
 
-Always do this before loading any workflow:
+Check for context files in this exact order. Stop at the first match — do not read multiple high-density files.
 
-1. **Read `README.md` first** (first 50 lines) — this tells you what product this is, who it's for, and what exists. If it doesn't exist, ask: "Can you describe your product in one sentence so I can tailor this to your project?"
-2. **Then read the most relevant doc** (max 50 lines) from:
-   - `docs/prd-*.md` — if the request is about a specific feature that has a PRD
-   - `docs/roadmap.md` — if the request is about prioritization or what to build next
-   - `docs/discovery-*.md` — if the request involves user research
+**Tier 1 — Pre-packed summaries (read first, highest signal per token):**
+- `.claude-context/codebase-map.md` — full codebase map, read up to 100 lines
+- `repomix.md` or `repomix-output.md` or `repomix.xml` — packed codebase, read up to 100 lines
+- `graphify-out/summary.md` or `graphify-out/*.md` — knowledge graph summary, read up to 80 lines
+- `CLAUDE.md` or `AGENTS.md` or `GEMINI.md` — project-level AI instructions, read fully
 
-Use what you learn to make every output specific to this project — not generic.
+**Tier 2 — Standard project docs (if no Tier 1 found):**
+- `README.md` — first 60 lines only
+
+**Tier 3 — Workflow-specific docs (always check after Tier 1 or 2):**
+- `docs/prd-*.md` — if request is about a specific feature (most recent, max 60 lines)
+- `docs/roadmap.md` — if request is about priorities or what to build (max 60 lines)
+- `docs/discovery-*.md` — if request involves user research (most recent, max 60 lines)
+
+If none of the above exist, ask: "Can you describe your product in one sentence so I can tailor this to your project?"
+
+Use everything you read to make outputs specific to this product — never generic.
 
 ## Step 3 — Execute
 

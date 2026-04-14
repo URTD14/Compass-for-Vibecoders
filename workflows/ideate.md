@@ -7,12 +7,22 @@ Generate, evaluate, and rank feature ideas for a given problem or goal. Run this
 The problem to solve, the goal to achieve, or the metric to move. If unclear, ask: "What problem are you trying to solve, or what metric are you trying to move?"
 
 ## Read project context first (required)
-Before generating any ideas:
-1. Read `README.md` (first 50 lines) — understand the product, the user, and what already exists
-2. Read `docs/roadmap.md` if it exists — understand what's already planned so you don't suggest it
-3. Read any recent `docs/prd-*.md` — understand what's already been specced
+Before generating any ideas, load context in this order (stop at first match for Tier 1):
 
-Use this context to make every idea specific to this product and this user. Never generate ideas that contradict existing plans or have already been built.
+**Tier 1 — Pre-packed summaries (most signal, fewest tokens):**
+- `.claude-context/codebase-map.md` (up to 100 lines)
+- `repomix.md` / `repomix-output.md` / `repomix.xml` (up to 100 lines)
+- `graphify-out/summary.md` or any `graphify-out/*.md` (up to 80 lines)
+- `CLAUDE.md` / `AGENTS.md` / `GEMINI.md` (full file)
+
+**Tier 2 — Fallback:**
+- `README.md` (first 60 lines)
+
+**Then always check:**
+- `docs/roadmap.md` — what's already planned (skip ideas already on the roadmap)
+- Most recent `docs/prd-*.md` — what's already been specced (skip those)
+
+Use all of this to generate ideas specific to this product, this user, and this stage — never generic.
 
 ## Process
 1. Reframe the input as a "How might we..." statement specific to this product
