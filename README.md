@@ -10,29 +10,39 @@ Works in **Claude Code**, **Antigravity**, and **OpenCode**.
 
 ## Install
 
+All three tools use the same `SKILL.md` format — one install, works everywhere.
+
 ### Claude Code
 
 ```bash
+# Global (works in all projects)
 git clone https://github.com/urtd/pm-skill ~/.claude/skills/pm
-```
 
-Then just describe what you need in Claude Code — the skill detects your intent automatically.
+# Project-local only
+git clone https://github.com/urtd/pm-skill .claude/skills/pm
+```
 
 ### Antigravity
 
 ```bash
-git clone https://github.com/urtd/pm-skill
-# Copy SKILL.md and workflows/ to your Antigravity skills directory
-# See Antigravity docs for the exact path
+# Global (works in all projects)
+git clone https://github.com/urtd/pm-skill ~/.gemini/antigravity/skills/pm
+
+# Workspace-local only
+git clone https://github.com/urtd/pm-skill .agent/skills/pm
 ```
 
 ### OpenCode
 
 ```bash
-git clone https://github.com/urtd/pm-skill
-# Copy SKILL.md and workflows/ to your OpenCode skills directory
-# See OpenCode docs for the exact path
+# Global (works in all projects)
+git clone https://github.com/urtd/pm-skill ~/.config/opencode/skills/pm
+
+# Project-local only
+git clone https://github.com/urtd/pm-skill .opencode/skills/pm
 ```
+
+Then just describe what you need — the skill detects your intent automatically.
 
 ---
 

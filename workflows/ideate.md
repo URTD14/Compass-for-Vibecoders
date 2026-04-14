@@ -6,12 +6,20 @@ Generate, evaluate, and rank feature ideas for a given problem or goal. Run this
 ## Input
 The problem to solve, the goal to achieve, or the metric to move. If unclear, ask: "What problem are you trying to solve, or what metric are you trying to move?"
 
+## Read project context first (required)
+Before generating any ideas:
+1. Read `README.md` (first 50 lines) — understand the product, the user, and what already exists
+2. Read `docs/roadmap.md` if it exists — understand what's already planned so you don't suggest it
+3. Read any recent `docs/prd-*.md` — understand what's already been specced
+
+Use this context to make every idea specific to this product and this user. Never generate ideas that contradict existing plans or have already been built.
+
 ## Process
-1. Reframe the input as a "How might we..." statement
-2. Generate 5–7 genuinely distinct feature ideas — not variations of the same idea
+1. Reframe the input as a "How might we..." statement specific to this product
+2. Generate 5–7 genuinely distinct feature ideas grounded in what you know about the product
 3. For each: one-line description, effort (S/M/L/XL), impact (H/M/L), and the key assumption it relies on
 4. Flag the riskiest assumption for each idea
-5. Recommend top 1–2 to develop into PRDs, with clear rationale
+5. Recommend top 1–2 to develop into PRDs, with clear rationale tied to the product's actual goals
 
 ## Output
 

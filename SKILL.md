@@ -29,14 +29,17 @@ Match the user's message to a workflow file:
 
 If nothing matches, ask: **"What are you trying to do?"** and list: write a PRD, break into stories, prioritize, synthesize research, plan a launch, write an update, analyze competitors, synthesize feedback, run a pre-mortem, set OKRs, write an interview guide, write a strategic brief, generate feature ideas.
 
-## Step 2 — Load context (max 3 files, max 50 lines each)
+## Step 2 — Load project context
 
-Before loading the workflow, check if any of these exist and read the most relevant one only:
-- `docs/roadmap.md`
-- `docs/prd-*.md` (most recently modified)
-- `README.md` (first 30 lines only)
+Always do this before loading any workflow:
 
-Skip this step if none exist or none are relevant to the user's request.
+1. **Read `README.md` first** (first 50 lines) — this tells you what product this is, who it's for, and what exists. If it doesn't exist, ask: "Can you describe your product in one sentence so I can tailor this to your project?"
+2. **Then read the most relevant doc** (max 50 lines) from:
+   - `docs/prd-*.md` — if the request is about a specific feature that has a PRD
+   - `docs/roadmap.md` — if the request is about prioritization or what to build next
+   - `docs/discovery-*.md` — if the request involves user research
+
+Use what you learn to make every output specific to this project — not generic.
 
 ## Step 3 — Execute
 

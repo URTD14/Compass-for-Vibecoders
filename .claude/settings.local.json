@@ -3,7 +3,8 @@
     "allow": [
       "Bash(wc:*)",
       "Bash(cp \"E:/URTD/URTD-PM/SKILL.md\" \"C:/Users/Asus/.claude/skills/pm/\")",
-      "Bash(cp \"E:/URTD/URTD-PM/workflows/\"*.md \"C:/Users/Asus/.claude/skills/pm/workflows/\")"
+      "Bash(cp \"E:/URTD/URTD-PM/workflows/\"*.md \"C:/Users/Asus/.claude/skills/pm/workflows/\")",
+      "WebSearch"
     ]
   }
 }
