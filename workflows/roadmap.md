@@ -1,18 +1,19 @@
 # Roadmap & Prioritization Workflow
 
 ## Input
-A list of features, ideas, or backlog items. Can be freeform. If the user hasn't provided a list, ask: "Paste your list of features or ideas — one per line is fine."
+A list of features, ideas, or backlog items. Freeform. If missing, ask: "Paste your list — one per line is fine. Also: what's the one metric you're trying to move this quarter?"
+
+## OKR linkage
+The north star metric the team is chasing this quarter becomes the scoring lens. Any feature that doesn't connect to it goes to Later automatically — no exceptions.
 
 ## RICE Scoring
+Score each item. Flag estimates with `~`.
 
-Score each item. If exact data is unavailable, estimate and flag estimates with `~`.
-
-RICE Score = (Reach × Impact × Confidence) ÷ Effort
-
-- **Reach:** How many users affected per month? (1–10 scale)
-- **Impact:** How much does it move the needle? (1 = low, 2 = medium, 3 = high)
-- **Confidence:** How sure are you? (expressed as %, e.g. 80)
-- **Effort:** Engineering weeks to ship
+RICE = (Reach × Impact × Confidence) ÷ Effort
+- Reach: users/month affected (1–10)
+- Impact: 1 low / 2 medium / 3 high
+- Confidence: % certainty (e.g. 80)
+- Effort: engineering weeks
 
 ## Output
 
@@ -21,23 +22,32 @@ Save to `docs/roadmap.md`:
 ---
 # Product Roadmap
 **Last updated:** [today's date]
+**North star this quarter:** [metric the team is trying to move — e.g. "week-2 retention"]
+
+## Strategic themes
+- **[Theme 1]:** [one-line — e.g. "Reduce time-to-value for new signups"]
+- **[Theme 2]:** [one-line]
 
 ## RICE Scores
-| Feature | Reach | Impact | Confidence | Effort | Score |
-|---|---|---|---|---|---|
-| [Feature] | [R] | [I] | [C]% | [E]w | [R×I×(C/100)/E] |
+| Feature | Theme | Reach | Impact | Conf | Effort | Score |
+|---|---|---|---|---|---|---|
+| [Feature] | [Theme] | [R] | [I] | [C]% | [E]w | [R×I×(C/100)/E] |
 
-## Now (current sprint / this month)
-- **[Feature]** — [one-line rationale] *(RICE: X)*
+## Now (this sprint / month)
+- **[Feature]** — [one-line rationale tied to north star] *(RICE: X)*
+  - Opportunity cost: not doing [alternative] this cycle
 
-## Next (next sprint / this quarter)
+## Next (next sprint / quarter)
 - **[Feature]** — [one-line rationale] *(RICE: X)*
 
 ## Later (backlog)
 - **[Feature]** — [one-line rationale] *(RICE: X)*
 
+## Dependencies
+- [Feature A] must ship before [Feature B] — [reason]
+
 ## Assumptions
-[List any estimates marked with ~ and what they assumed]
+[Any estimates flagged with ~ and what they assumed]
 ---
 
 After saving, reply: "Roadmap saved to `docs/roadmap.md`"

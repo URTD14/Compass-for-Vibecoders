@@ -1,50 +1,62 @@
 # PRD Workflow
 
 ## Input
-You have a feature or product to write a PRD for. If the name or one-line purpose is missing from the user's message, ask ONE question: "What does this do in one sentence?"
+Feature or product to write a PRD for. If the name or one-line purpose is missing, ask ONE question: "What does this do in one sentence?"
 
 ## Output
 
-Write the PRD using the structure below. Save to `docs/prd-[feature-kebab-case].md`.
+Write the PRD below. Save to `docs/prd-[feature-kebab-case].md`.
 
 ---
 # PRD: [Feature Name]
 **Date:** [today's date]
 **Status:** Draft
 
+## Hypothesis
+We believe that [building this] for [specific user] will [outcome]. We'll know we're right when [metric] changes by [amount] within [timeframe].
+
 ## Problem
-[2–3 sentences. What user pain does this solve? Why does it matter now?]
+[2–3 sentences. What user pain does this solve? Why now? Ground it in a real situation — not an abstraction.]
 
 ## Users
-[Who specifically experiences this? e.g. "Solo founders shipping their first SaaS product"]
+[Not "users." Be specific: e.g. "Solo founders with < 3 months to launch, no marketing budget"]
+
+## Job to Be Done
+When [situation], users want to [motivation], so they can [outcome].
 
 ## Goals
-- [ ] [Measurable outcome — e.g. "Users generate a PRD in under 60 seconds"]
+- [ ] [Measurable outcome tied to a specific metric]
 - [ ] [Measurable outcome]
 
 ## Non-goals
-- [What this will NOT do — be specific, not vague]
-
-## User Stories
-1. As a [user], I want [action] so that [outcome]
-2. As a [user], I want [action] so that [outcome]
-3. As a [user], I want [action] so that [outcome]
+- [Specific thing this will NOT do — and why, e.g. "No email sequences — use Loops for that"]
 
 ## Requirements
-**Must have:**
-- [Specific, unambiguous requirement]
 
-**Nice to have:**
-- [Specific requirement]
+| Requirement | Priority | Risk |
+|---|---|---|
+| [Specific, unambiguous requirement] | Must | H/M/L |
+| [Specific requirement] | Should | H/M/L |
+| [Specific requirement] | Could | H/M/L |
 
 ## Success Metrics
-| Metric | Target |
-|---|---|
-| [e.g. Time to first PRD] | [e.g. < 60 seconds] |
-| [e.g. User completes without help] | [e.g. > 80%] |
+| Metric | Baseline | Target | Timeframe |
+|---|---|---|---|
+| [North star metric] | [current or "unknown"] | [target] | [e.g. 30d post-launch] |
+| [Secondary metric] | | | |
+
+## Assumption Log
+| Assumption | Confidence | How to validate |
+|---|---|---|
+| [What we're assuming is true] | H/M/L | [Experiment or data source] |
+
+## Decision Log
+| Decision | Chosen | Alternatives | Rationale |
+|---|---|---|---|
+| [e.g. Auth method] | [Email only] | [OAuth, phone] | [Lower friction for MVP] |
 
 ## Open Questions
-- [ ] [Decision that must be made before building]
+- [ ] [Must resolve before building — who owns answering this?]
 ---
 
 After saving, reply: "PRD saved to `docs/prd-[name].md`"

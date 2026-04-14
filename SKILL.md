@@ -21,8 +21,12 @@ Match the user's message to a workflow file:
 | update, changelog, announce, tweet, "status update" | `workflows/update.md` |
 | competitors, compare, market, landscape, " vs " | `workflows/compete.md` |
 | feedback, reviews, NPS, "app store", "users said" | `workflows/feedback.md` |
+| "pre-mortem", "what could go wrong", risks, assumptions | `workflows/premortem.md` |
+| OKR, objective, "key results", "this quarter", goals | `workflows/okr.md` |
+| "interview guide", "talk to users", "user interview" | `workflows/interview.md` |
+| brief, "strategic brief", "one-pager", "why are we building" | `workflows/brief.md` |
 
-If nothing matches, ask: **"What are you trying to do?"** and list: write a PRD, break into stories, prioritize, synthesize research, plan a launch, write an update, analyze competitors, synthesize feedback.
+If nothing matches, ask: **"What are you trying to do?"** and list: write a PRD, break into stories, prioritize, synthesize research, plan a launch, write an update, analyze competitors, synthesize feedback, run a pre-mortem, set OKRs, write an interview guide, write a strategic brief.
 
 ## Step 2 — Load context (max 3 files, max 50 lines each)
 

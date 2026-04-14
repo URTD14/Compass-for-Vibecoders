@@ -40,14 +40,18 @@ git clone https://github.com/urtd/pm-skill
 
 | Say something like... | What happens | Saves to |
 |---|---|---|
-| "Write a PRD for [feature]" | Generates structured PRD | `docs/prd-[feature].md` |
-| "Break [feature] into user stories" | Creates stories + acceptance criteria | `docs/stories-[feature].md` |
-| "Prioritize my backlog" | RICE scoring + now/next/later | `docs/roadmap.md` |
-| "Synthesize these user interviews" | Themes + opportunity statements | `docs/discovery-[topic].md` |
+| "Write a PRD for [feature]" | Hypothesis + JTBD + requirements with risk + assumption log | `docs/prd-[feature].md` |
+| "Break [feature] into user stories" | JTBD stories + AC + Definition of Done | `docs/stories-[feature].md` |
+| "Prioritize my backlog" | RICE + OKR linkage + opportunity cost | `docs/roadmap.md` |
+| "Synthesize these user interviews" | JTBD themes + opportunity scoring (Ulwick) | `docs/discovery-[topic].md` |
 | "Plan the launch for [feature]" | Checklist + announcement copy | `docs/launch-[feature].md` |
 | "Write a status update" | Changelog + stakeholder summary + tweet thread | `docs/update-[date].md` |
 | "Analyze my competitors" | Comparison table + positioning statement | `docs/compete-[space].md` |
 | "Synthesize this feedback" | Themes + quotes + next actions | `docs/feedback-[date].md` |
+| "Pre-mortem [feature]" | Risk map + mitigations + launch tripwires | `docs/premortem-[feature].md` |
+| "Set OKRs for Q[N]" | Objective + KRs + leading indicators | `docs/okr-[quarter].md` |
+| "Write an interview guide for [topic]" | JTBD question framework + debrief template | `docs/interview-guide-[topic].md` |
+| "Write a strategic brief for [initiative]" | One-page bet + metrics + risks + ask | `docs/brief-[initiative].md` |
 
 ---
 
