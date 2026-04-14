@@ -7,22 +7,17 @@ Generate, evaluate, and rank feature ideas for a given problem or goal. Run this
 The problem to solve, the goal to achieve, or the metric to move. If unclear, ask: "What problem are you trying to solve, or what metric are you trying to move?"
 
 ## Read project context first (required)
-Before generating any ideas, load context in this order (stop at first match for Tier 1):
+Read ALL of the following that exist before generating a single idea:
 
-**Tier 1 — Pre-packed summaries (most signal, fewest tokens):**
-- `.claude-context/codebase-map.md` (up to 100 lines)
-- `repomix.md` / `repomix-output.md` / `repomix.xml` (up to 100 lines)
-- `graphify-out/summary.md` or any `graphify-out/*.md` (up to 80 lines)
-- `CLAUDE.md` / `AGENTS.md` / `GEMINI.md` (full file)
+- `.claude-context/codebase-map.md` (up to 150 lines)
+- `repomix.md` / `repomix-output.md` / `repomix.xml` (up to 150 lines)
+- `graphify-out/summary.md` or any `graphify-out/*.md` (up to 100 lines)
+- `CLAUDE.md` / `AGENTS.md` / `GEMINI.md` (full)
+- `README.md` (first 80 lines)
+- `docs/roadmap.md` — skip any idea already on the roadmap
+- Most recent `docs/prd-*.md` — skip anything already specced
 
-**Tier 2 — Fallback:**
-- `README.md` (first 60 lines)
-
-**Then always check:**
-- `docs/roadmap.md` — what's already planned (skip ideas already on the roadmap)
-- Most recent `docs/prd-*.md` — what's already been specced (skip those)
-
-Use all of this to generate ideas specific to this product, this user, and this stage — never generic.
+Do NOT read individual source files — the above give you the full picture without it. Use everything you read to generate ideas specific to this product, this user, and this exact stage. Never generic.
 
 ## Process
 1. Reframe the input as a "How might we..." statement specific to this product

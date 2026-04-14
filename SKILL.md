@@ -29,27 +29,26 @@ Match the user's message to a workflow file:
 
 If nothing matches, ask: **"What are you trying to do?"** and list: write a PRD, break into stories, prioritize, synthesize research, plan a launch, write an update, analyze competitors, synthesize feedback, run a pre-mortem, set OKRs, write an interview guide, write a strategic brief, generate feature ideas.
 
-## Step 2 — Load project context (token-efficient priority order)
+## Step 2 — Load project context (full understanding, token-efficient)
 
-Check for context files in this exact order. Stop at the first match — do not read multiple high-density files.
+Read ALL of the following that exist. These compressed files replace raw file exploration — they give you the full codebase picture without reading individual source files one by one.
 
-**Tier 1 — Pre-packed summaries (read first, highest signal per token):**
-- `.claude-context/codebase-map.md` — full codebase map, read up to 100 lines
-- `repomix.md` or `repomix-output.md` or `repomix.xml` — packed codebase, read up to 100 lines
-- `graphify-out/summary.md` or `graphify-out/*.md` — knowledge graph summary, read up to 80 lines
-- `CLAUDE.md` or `AGENTS.md` or `GEMINI.md` — project-level AI instructions, read fully
+**Read every file that exists from this list:**
 
-**Tier 2 — Standard project docs (if no Tier 1 found):**
-- `README.md` — first 60 lines only
+| Priority | File(s) | Why | Max lines |
+|---|---|---|---|
+| 1st | `.claude-context/codebase-map.md` | Full codebase structure and summary | 150 |
+| 2nd | `repomix.md` / `repomix-output.md` / `repomix.xml` | Full packed codebase | 150 |
+| 3rd | `graphify-out/summary.md` or any `graphify-out/*.md` | Knowledge graph of the project | 100 |
+| 4th | `CLAUDE.md` / `AGENTS.md` / `GEMINI.md` | Project-level AI instructions | Full |
+| 5th | `README.md` | Product purpose, users, what exists | 80 |
+| 6th | `docs/roadmap.md` | What's planned — avoid suggesting it | 80 |
+| 7th | Most recent `docs/prd-*.md` | What's already been specced | 80 |
+| 8th | Most recent `docs/discovery-*.md` | User research already done | 80 |
 
-**Tier 3 — Workflow-specific docs (always check after Tier 1 or 2):**
-- `docs/prd-*.md` — if request is about a specific feature (most recent, max 60 lines)
-- `docs/roadmap.md` — if request is about priorities or what to build (max 60 lines)
-- `docs/discovery-*.md` — if request involves user research (most recent, max 60 lines)
+**Do NOT read individual source files** — the compressed files above replace that. If none of the above exist at all, ask: "Can you give me a quick description of your product so I can tailor this to your project?"
 
-If none of the above exist, ask: "Can you describe your product in one sentence so I can tailor this to your project?"
-
-Use everything you read to make outputs specific to this product — never generic.
+After reading everything available, you should know: what the product does, who it's for, what's already built, what's planned, and what's been researched. Use all of this to make every output specific to this project — never generic.
 
 ## Step 3 — Execute
 
