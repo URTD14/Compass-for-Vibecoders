@@ -25,8 +25,9 @@ Match the user's message to a workflow file:
 | OKR, objective, "key results", "this quarter", goals | `workflows/okr.md` |
 | "interview guide", "talk to users", "user interview" | `workflows/interview.md` |
 | brief, "strategic brief", "one-pager", "why are we building" | `workflows/brief.md` |
+| ideas, ideate, "new feature", "what should we build", brainstorm, "feature ideas" | `workflows/ideate.md` |
 
-If nothing matches, ask: **"What are you trying to do?"** and list: write a PRD, break into stories, prioritize, synthesize research, plan a launch, write an update, analyze competitors, synthesize feedback, run a pre-mortem, set OKRs, write an interview guide, write a strategic brief.
+If nothing matches, ask: **"What are you trying to do?"** and list: write a PRD, break into stories, prioritize, synthesize research, plan a launch, write an update, analyze competitors, synthesize feedback, run a pre-mortem, set OKRs, write an interview guide, write a strategic brief, generate feature ideas.
 
 ## Step 2 — Load context (max 3 files, max 50 lines each)
 

@@ -52,6 +52,7 @@ git clone https://github.com/urtd/pm-skill
 | "Set OKRs for Q[N]" | Objective + KRs + leading indicators | `docs/okr-[quarter].md` |
 | "Write an interview guide for [topic]" | JTBD question framework + debrief template | `docs/interview-guide-[topic].md` |
 | "Write a strategic brief for [initiative]" | One-page bet + metrics + risks + ask | `docs/brief-[initiative].md` |
+| "Generate feature ideas for [problem]" | HMW framing + 5–7 ideas + effort/impact eval + recommendation | `docs/ideation-[problem].md` |
 
 ---
 
